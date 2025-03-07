@@ -99,16 +99,50 @@ Once you have the **HEX file**, you need to **upload it to the PIC16F722 using A
 
 ### **Methods to Upload HEX File**
 
-[![Screenshot (179)](https://github.com/user-attachments/assets/9e83be01-d3c9-457f-b3da-ab54f4940ef4)](https://usbpicprog.org/?page_id=193)
+![Screenshot (185)](https://github.com/user-attachments/assets/7b84c20f-babb-46c4-aa60-c786b7b705e0)
 
-1. **Use "Arduino as PIC Programmer" Sketch**  
-   - Install `ArduinoPICProgrammer` firmware on Nano (Google "Arduino PIC Programmer GitHub").
-   - Connect Nano to PC, upload the PIC programmer sketch.
-   - Use `picprog` tool to upload the HEX file.
+### 1. **Download ArdPicProg Firmware**
 
-2. **Use a Dedicated PIC Programmer**  
-   - If available, use a **PICkit 3/4** or an **USBASP PIC Programmer**.
-   - Connect it to the ICSP pins and upload the HEX file via **MPLAB IPE**.
+ArdPicProg is an Arduino-based PIC programmer that can be used to program various PIC microcontrollers.
+
+- **GitHub Repository:** [https://github.com/Ho-Ro/ArdPicProg](https://github.com/Ho-Ro/ArdPicProg)
+
+**Steps:**
+
+1. Visit the GitHub repository linked above.
+2. Click on the green "Code" button and select "Download ZIP" to download the entire repository.
+3. Extract the ZIP file to a convenient location on your computer.
+
+### 2. **Upload Firmware to Arduino Nano**
+
+Once you have the ArdPicProg firmware, you'll need to upload it to your Arduino Nano:
+
+1. **Open Arduino IDE:** Ensure you have the Arduino IDE installed. If not, download it from [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software).
+2. **Load Firmware Sketch:**
+   - In the Arduino IDE, go to `File > Open` and navigate to the `ArdPicProg.ino` file within the extracted repository.
+3. **Select Board and Port:**
+   - Go to `Tools > Board` and select "Arduino Nano."
+   - Under `Tools > Processor`, choose the correct processor type (usually "ATmega328P" or "ATmega328P (Old Bootloader)").
+   - Under `Tools > Port`, select the COM port corresponding to your Arduino Nano.
+4. **Upload Sketch:** Click the upload button (right arrow icon) to upload the firmware to your Arduino Nano.
+
+![Screenshot (186)](https://github.com/user-attachments/assets/038623b9-ee95-4967-b452-cbcb8570215e)
+![Screenshot (187)](https://github.com/user-attachments/assets/299f3746-44d2-43dc-9a87-a486d0e7a85a)
+
+### 3. **Connect Arduino Nano to PIC16F722**
+
+After uploading the firmware, set up the hardware connections between the Arduino Nano and the PIC16F722. Refer to the ArdPicProg documentation for the correct wiring diagram.
+
+### 4. **Use the Programmer Software**
+
+ArdPicProg provides software tools to interface with the Arduino-based programmer:
+
+1. **Install Required Software:** Depending on your operating system, install the necessary drivers and software as mentioned in the ArdPicProg documentation.
+2. **Upload HEX File:** Use the provided software to select and upload your compiled HEX file to the PIC16F722.
+
+**Note:** Ensure you read the ArdPicProg documentation thoroughly to understand the specific steps and requirements for your setup.
+
+If you encounter any issues or need further assistance, feel free to ask! 
 
 ---
 
