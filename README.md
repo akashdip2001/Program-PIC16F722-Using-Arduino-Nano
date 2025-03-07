@@ -71,6 +71,17 @@ void main() {
 ### **Step 4: Compiling & Generating HEX File**
 
 [![Screenshot (157)](https://github.com/user-attachments/assets/1fdc313c-4993-4ccc-b8ee-fdb113023f64)](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide#tabs)
+![Screenshot (159)](https://github.com/user-attachments/assets/ada24605-fda0-46f6-9d69-08b505551e7d)
+![Screenshot (160)](https://github.com/user-attachments/assets/daa151a6-bacc-422e-80dc-c2df357bde0c)
+![Screenshot (162)](https://github.com/user-attachments/assets/ef342cd8-faa4-4240-85d8-b867dfd36c2b)
+![Screenshot (164)](https://github.com/user-attachments/assets/c37044c6-32d1-44cb-8536-e13afaafa004)
+![Screenshot (165)](https://github.com/user-attachments/assets/22d4aa26-3144-43ae-8532-5702cb78ea23)
+![Screenshot (167)](https://github.com/user-attachments/assets/c8582962-7b54-446b-b6c5-1b1a7219a041)
+![Screenshot (168)](https://github.com/user-attachments/assets/2a2b254b-8eec-4bfc-b182-ec7868d0e3dd)
+![Screenshot (169)](https://github.com/user-attachments/assets/7e32caca-f677-4174-bfca-60ba6dcbfb6f)
+![Screenshot (171)](https://github.com/user-attachments/assets/e6f2e0d0-4392-4fb3-a0b9-6af255cf0b01)
+![Screenshot (172)](https://github.com/user-attachments/assets/6c414011-f499-496a-9ecc-3e642fee7b9e)
+![Screenshot (174)](https://github.com/user-attachments/assets/32f19644-d1be-43a4-81bc-d6f23cee4e46)
 
 1. Open **MPLAB X IDE** and create a new project for **PIC16F722**.
 2. Select the **XC8 Compiler**.
