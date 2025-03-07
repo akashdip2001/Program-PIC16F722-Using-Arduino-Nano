@@ -3,6 +3,9 @@ How to Program the PIC16F722 Using Arduino Nano (CH340C)
 
 ![Screenshot (183)](https://github.com/user-attachments/assets/be5cc5b2-e74d-4bea-a3df-0f8c820a0aab)
 
+</br>
+</br>
+
 <img align="right" width="35%" src="https://github.com/user-attachments/assets/b5362f43-7eec-449f-9652-5d813f59a7e1">
 
 ## **Step 1: Understanding the Limitations**
@@ -75,7 +78,7 @@ void main() {
 [![Screenshot (157)](https://github.com/user-attachments/assets/1fdc313c-4993-4ccc-b8ee-fdb113023f64)](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide#tabs)
 
 <details>
-  <summary style="opacity: 0.85;"><b>Download & SetUp</b></summary><br>
+  <summary style="opacity: 0.85;"><b>🔧 Download & SetUp ⭐⚙️🛠️ Guide</b></summary><br>
   <div style="display: flex; align-items: center; gap: 10px;" align="center">
      
 ![Screenshot (159)](https://github.com/user-attachments/assets/ada24605-fda0-46f6-9d69-08b505551e7d)
