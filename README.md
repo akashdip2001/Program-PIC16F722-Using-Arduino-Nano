@@ -1,6 +1,8 @@
 # Program-PIC16F722-Using-Arduino-Nano
 How to Program the PIC16F722 Using Arduino Nano (CH340C)
 
+<img align="right" width="35%" src="https://github.com/user-attachments/assets/b5362f43-7eec-449f-9652-5d813f59a7e1">
+
 ## **Step 1: Understanding the Limitations**
 The **PIC16F722** is a PIC microcontroller and **cannot** be programmed directly using the Arduino IDE (which is designed for AVR and ARM-based microcontrollers like the ATmega328 on the Arduino Nano). However, you can use the Arduino Nano as a **PIC programmer** to upload the compiled HEX file to the PIC16F722.
 
@@ -32,6 +34,11 @@ To **program** the PIC16F722 using an **Arduino Nano**, you need to connect the 
 
 ---
 
+<p float="center">
+  <img src="https://github.com/user-attachments/assets/4d670c0d-3b12-4c24-a722-882d8daeb54f" width="45%" />
+  <img src="https://github.com/user-attachments/assets/0bd14dbe-8c92-4514-bdd6-c3a15b973d3e" width="45%" />
+</p>
+
 ## **Step 3: Writing the LED Blink Code**
 Since the **Arduino IDE does not support PIC**, you need to write the code in **MPLAB X IDE** using the **XC8 Compiler**.
 
@@ -62,6 +69,9 @@ void main() {
 ```
 
 ### **Step 4: Compiling & Generating HEX File**
+
+[![Screenshot (157)](https://github.com/user-attachments/assets/1fdc313c-4993-4ccc-b8ee-fdb113023f64)](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide#tabs)
+
 1. Open **MPLAB X IDE** and create a new project for **PIC16F722**.
 2. Select the **XC8 Compiler**.
 3. Copy the **LED Blink Code** above into `main.c`.
