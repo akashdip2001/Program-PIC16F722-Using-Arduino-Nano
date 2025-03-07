@@ -1,6 +1,8 @@
 # Program-PIC16F722-Using-Arduino-Nano
 How to Program the PIC16F722 Using Arduino Nano (CH340C)
 
+![Screenshot (183)](https://github.com/user-attachments/assets/be5cc5b2-e74d-4bea-a3df-0f8c820a0aab)
+
 <img align="right" width="35%" src="https://github.com/user-attachments/assets/b5362f43-7eec-449f-9652-5d813f59a7e1">
 
 ## **Step 1: Understanding the Limitations**
