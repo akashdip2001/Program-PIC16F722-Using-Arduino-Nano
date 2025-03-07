@@ -153,3 +153,94 @@ If you encounter any issues or need further assistance, feel free to ask!
 - **You must write code in MPLAB X with XC8 Compiler.**  
 - **Use Arduino Nano as a PIC Programmer to upload the HEX file.**  
 - **For an easier approach, use a dedicated PICkit programmer.**
+
+---
+
+# Upload HEX File
+
+![Screenshot (189)](https://github.com/user-attachments/assets/76ba14b0-20c9-4677-b0c7-389855fa414a)
+
+To compile **ArdPicProg** manually from the source, follow these steps:  
+
+---
+
+### **1. Download the Source Code**
+1. Go to the **ArdPicProg GitHub repository**:  
+   🔗 [https://github.com/Ho-Ro/ArdPicProg](https://github.com/Ho-Ro/ArdPicProg)
+2. Click on **Code** > **Download ZIP** and extract it.
+3. Alternatively, use Git to clone it:  
+   ```bash
+   git clone https://github.com/Ho-Ro/ArdPicProg.git
+   cd ArdPicProg
+   ```
+
+---
+
+### **2. Install Required Dependencies**
+Before compiling, install the necessary dependencies:
+
+#### **For Windows:**
+- Install **MinGW** (for `gcc` compiler) if not installed.
+- Install `make` for Windows.
+- Install `wxWidgets` if the GUI version is required.
+
+#### **For Linux (Ubuntu/Debian-based):**
+Run the following command:
+```bash
+sudo apt update
+sudo apt install build-essential libwxgtk3.0-gtk3-dev libusb-dev
+```
+
+---
+
+### **3. Compile the Firmware for Arduino**
+The firmware must be uploaded to an **Arduino Nano**.
+
+1. Open **Arduino IDE**.
+2. Load the **ArdPicProg.ino** file from `ArdPicProg/firmware/`.
+3. Select **Arduino Nano** as the board.
+4. Choose the correct **COM Port**.
+5. Click **Upload**.
+
+---
+
+### **4. Compile the PC Software (CLI Version)**
+For Linux/macOS, use the `make` command:
+```bash
+cd ArdPicProg
+make
+```
+If successful, an executable file (`ardpicprog`) will be generated.
+
+For Windows, you need to use **MinGW** or **Cygwin**:
+```bash
+mingw32-make
+```
+
+---
+
+### **5. Run ArdPicProg**
+After successful compilation, you can run:
+```bash
+./ardpicprog --help
+```
+This will show the available commands.
+
+---
+
+### **6. Flash the HEX File to the PIC Microcontroller**
+If you have a **PIC16F722** and a compiled **ArdPicProg**, flash the HEX file using:
+```bash
+./ardpicprog -p <port> -w firmware.hex
+```
+Replace `<port>` with the correct **COM port** (e.g., `/dev/ttyUSB0` or `COM3` on Windows).
+
+---
+
+### **Troubleshooting**
+- If **wxWidgets** is missing for GUI, install it:
+  ```bash
+  sudo apt install libwxgtk3.0-gtk3-dev
+  ```
+- If compilation fails, check for missing libraries (`libusb`, `wxWidgets`, etc.).
+- If the device is not detected, ensure the Arduino firmware is properly uploaded.
