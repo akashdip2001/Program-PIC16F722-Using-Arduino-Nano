@@ -82,6 +82,8 @@ void main() {
 ![Screenshot (171)](https://github.com/user-attachments/assets/e6f2e0d0-4392-4fb3-a0b9-6af255cf0b01)
 ![Screenshot (172)](https://github.com/user-attachments/assets/6c414011-f499-496a-9ecc-3e642fee7b9e)
 ![Screenshot (174)](https://github.com/user-attachments/assets/32f19644-d1be-43a4-81bc-d6f23cee4e46)
+![Screenshot (175)](https://github.com/user-attachments/assets/52c31189-c3ff-44e6-9190-10a51d2572d7)
+![Screenshot (177)](https://github.com/user-attachments/assets/2804ac9b-e5dc-48a6-bd28-bd57bc17abd3)
 
 1. Open **MPLAB X IDE** and create a new project for **PIC16F722**.
 2. Select the **XC8 Compiler**.
