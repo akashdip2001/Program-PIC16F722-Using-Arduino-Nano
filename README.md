@@ -156,7 +156,7 @@ If you encounter any issues or need further assistance, feel free to ask!
 
 ---
 
-# Upload HEX File
+# ❌ Upload HEX File
 
 ![Screenshot (189)](https://github.com/user-attachments/assets/76ba14b0-20c9-4677-b0c7-389855fa414a)
 
