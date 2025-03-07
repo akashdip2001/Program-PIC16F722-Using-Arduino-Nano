@@ -180,7 +180,7 @@ To compile **ArdPicProg** manually from the source, follow these steps:
 Before compiling, install the necessary dependencies:
 
 #### **For Windows:**
-- Install **MinGW** (for `gcc` compiler) if not installed.
+- [Install **MinGW**](https://akashdip2001.github.io/minGW-W64/) (for `gcc` compiler) if not installed.
 - Install `make` for Windows.
 - Install `wxWidgets` if the GUI version is required.
 
