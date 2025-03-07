@@ -257,3 +257,9 @@ Replace `<port>` with the correct **COM port** (e.g., `/dev/ttyUSB0` or `COM3` o
   ```
 - If compilation fails, check for missing libraries (`libusb`, `wxWidgets`, etc.).
 - If the device is not detected, ensure the Arduino firmware is properly uploaded.
+
+
+<p float="center">
+  <img src="PIC16F722_1.jpg" width="45%" />
+  <img src="PIC16F722_2.jpg" width="45%" />
+</p>
