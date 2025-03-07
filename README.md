@@ -1,2 +1,92 @@
 # Program-PIC16F722-Using-Arduino-Nano
 How to Program the PIC16F722 Using Arduino Nano (CH340C)
+
+## **Step 1: Understanding the Limitations**
+The **PIC16F722** is a PIC microcontroller and **cannot** be programmed directly using the Arduino IDE (which is designed for AVR and ARM-based microcontrollers like the ATmega328 on the Arduino Nano). However, you can use the Arduino Nano as a **PIC programmer** to upload the compiled HEX file to the PIC16F722.
+
+### **Possible Approaches:**
+1. **Using an Arduino Nano as a PIC Programmer** (Bit-Bang Method)
+2. **Using a Dedicated PIC Programmer** (like a PICkit 3 or 4)
+3. **Using MPLAB X IDE and XC8 Compiler to Write the Code**  
+   (Instead of Arduino IDE)
+
+---
+
+## **Step 2: Circuit Connections**
+To **program** the PIC16F722 using an **Arduino Nano**, you need to connect the **In-Circuit Serial Programming (ICSP)** pins.
+
+### **PIC16F722 to Arduino Nano Wiring (ICSP Mode)**
+
+| **PIC16F722 Pin** | **Function**  | **Arduino Nano Pin** |
+|------------------|--------------|--------------------|
+| Pin 1 (MCLR)     | VPP (Programming) | D8 (with 10K pull-up to 5V) |
+| Pin 14 (VDD)     | Power (5V)        | 5V |
+| Pin 5 (VSS)      | Ground            | GND |
+| Pin 6 (PGC)      | Clock             | D9 |
+| Pin 7 (PGD)      | Data              | D10 |
+| Pin 21 (RB0)	   | LED 1 Output	     |	Cathode to GND, Anode via 330Ω resistor to RB0 |
+| Pin 27 (ICSPDAT) | Data (Alternative) | D10 |
+| Pin 28 (ICSPCLK) | Clock (Alternative) | D9 |
+
+💡 **Note:** Some PIC microcontrollers require **12V on MCLR** for high-voltage programming. If this is the case, you might need an external 12V circuit.
+
+---
+
+## **Step 3: Writing the LED Blink Code**
+Since the **Arduino IDE does not support PIC**, you need to write the code in **MPLAB X IDE** using the **XC8 Compiler**.
+
+### **LED Blink Code (MPLAB X - XC8 Compiler)**
+```c
+#include <xc.h>
+
+// Configuration Bits (Adjust for Your Setup)
+#pragma config FOSC = INTRCIO  // Internal Oscillator
+#pragma config WDTE = OFF      // Watchdog Timer Disable
+#pragma config PWRTE = OFF     // Power-up Timer Disable
+#pragma config MCLRE = ON      // MCLR Enable
+#pragma config CP = OFF        // Code Protection Off
+#pragma config BOREN = OFF     // Brown-out Reset Disable
+
+#define _XTAL_FREQ 4000000  // 4MHz Internal Oscillator
+
+void main() {
+    TRISB0 = 0;  // Set RB0 as output (LED pin)
+    
+    while(1) {
+        RB0 = 1;  // Turn LED ON
+        __delay_ms(500);
+        RB0 = 0;  // Turn LED OFF
+        __delay_ms(500);
+    }
+}
+```
+
+### **Step 4: Compiling & Generating HEX File**
+1. Open **MPLAB X IDE** and create a new project for **PIC16F722**.
+2. Select the **XC8 Compiler**.
+3. Copy the **LED Blink Code** above into `main.c`.
+4. Build the project (`Ctrl + Shift + B`).
+5. Locate the generated `.hex` file in the `dist/default/production` folder.
+
+---
+
+## **Step 5: Uploading HEX File to PIC16F722 Using Arduino Nano**
+Once you have the **HEX file**, you need to **upload it to the PIC16F722 using Arduino Nano**.
+
+### **Methods to Upload HEX File**
+1. **Use "Arduino as PIC Programmer" Sketch**  
+   - Install `ArduinoPICProgrammer` firmware on Nano (Google "Arduino PIC Programmer GitHub").
+   - Connect Nano to PC, upload the PIC programmer sketch.
+   - Use `picprog` tool to upload the HEX file.
+
+2. **Use a Dedicated PIC Programmer**  
+   - If available, use a **PICkit 3/4** or an **USBASP PIC Programmer**.
+   - Connect it to the ICSP pins and upload the HEX file via **MPLAB IPE**.
+
+---
+
+## **Conclusion**
+- **The Arduino IDE does not support PIC16F722.**  
+- **You must write code in MPLAB X with XC8 Compiler.**  
+- **Use Arduino Nano as a PIC Programmer to upload the HEX file.**  
+- **For an easier approach, use a dedicated PICkit programmer.**
